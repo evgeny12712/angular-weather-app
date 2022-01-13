@@ -1,0 +1,7 @@
+<section class="items-list flex auto-center wrap" *ngIf="forecast">
+  <items-preview
+    (onRemove)="onRemove.emit($event)"
+    *ngFor="let day of forecast"
+    [day]="day"
+  ></items-preview>
+</section>

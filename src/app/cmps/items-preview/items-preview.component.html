@@ -1,0 +1,11 @@
+<section class="items-preview">
+  <img *ngIf="imageSrc" [src]="imageSrc" alt="" />
+  <div class="day-info">
+    <div>{{ day.Date | date }}</div>
+    <div>{{ day.Day.IconPhrase }}</div>
+    <div>
+      {{ (day.Temperature.Minimum.Value + day.Temperature.Minimum.Value) / 2 }}
+      <span>&#8457;</span>
+    </div>
+  </div>
+</section>

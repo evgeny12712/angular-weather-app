@@ -1,0 +1,39 @@
+.items-preview {
+  background-color: rgba(233, 233, 233, 0.363);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  gap: 20px;
+  cursor: pointer;
+  height: 300px;
+  & .day-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  & img {
+    width: 150px;
+  }
+
+  @media (max-width: 560px) {
+    flex-direction: row;
+    height: fit-content;
+    width: 300px;
+    padding: 10px;
+  }
+
+  // @include for-narrow-layout {
+  // }
+
+  // @include for-normal-layout {
+  // }
+
+  // @include for-wide-layout {
+  // }
+}

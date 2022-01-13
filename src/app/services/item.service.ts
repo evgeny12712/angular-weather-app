@@ -1,0 +1,57 @@
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { delay, map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+import { Weather } from '../models/weather.model';
+import { storageService } from './storageService';
+@Injectable({
+  providedIn: 'root',
+})
+export class ItemService {
+  constructor(private http: HttpClient) {}
+
+  public async queryWeather(location) {
+    let locationKey: string;
+    let loc = (await this._getLocationId(location)) as any;
+    if (loc && loc.length) {
+      locationKey = loc[0].Key;
+      try {
+        return this.http
+          .get<{ answer: string }>(
+            `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=AikVyA6GWrhDgfdkt54NFwda2ilo5TUI`
+          )
+          .toPromise();
+      } catch (error) {
+        console.log('error', error);
+      }
+    }
+    return loc;
+  }
+
+  private _getLocationId(location: string) {
+    console.log(`Loading 'location' data from api...`);
+    try {
+      return this.http
+        .get(
+          `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=AikVyA6GWrhDgfdkt54NFwda2ilo5TUI&q=${location}`
+        )
+        .toPromise();
+    } catch (error) {
+      console.log('error', error);
+    }
+    return Promise.reject();
+  }
+
+  // private _isFavoriteLocation(location: string) {
+  //   let favorites = storageService.load('favorites');
+  //   if (!favorites) favorites = [];
+  //   else {
+  //     const neededLocation = favorites.find((favorite) => {
+  //       favorite.location = location;
+  //     });
+  //     return neededLocation;
+  //   }
+  // }
+  // http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=AikVyA6GWrhDgfdkt54NFwda2ilo5TUI&q=tel-aviv
+  // }
+}

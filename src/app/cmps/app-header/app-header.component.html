@@ -1,0 +1,16 @@
+<section class="header-container">
+  <header class="main-layout app-header flex align-center">
+    <nav routerLinkActive="active-link" class="nav-list flex">
+      <a class="nav-item" routerLink="items" routerLinkActive="active-link"
+        >Favorites</a
+      >
+      <a
+        class="nav-item"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink=""
+        >Home</a
+      >
+    </nav>
+  </header>
+</section>

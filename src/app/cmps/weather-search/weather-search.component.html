@@ -1,0 +1,16 @@
+<section class="weather-search flex auto-center column gap">
+  <form (ngSubmit)="onSearch()">
+    <div class="search-wrapper flex auto-center">
+      <input
+        [(ngModel)]="location"
+        name="location"
+        type="text"
+        placeholder="Search..."
+      />
+      <button>
+        <img src="./assets/search-icon.png" alt="" />
+      </button>
+    </div>
+  </form>
+  <span *ngIf="isNoLocation" class="is-no-location">Location not found!</span>
+</section>

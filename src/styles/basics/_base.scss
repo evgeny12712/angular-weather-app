@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial;
+  color: $clr2;
+  line-height: 1.8;
+}
+
+body {
+  margin: 0;
+  background-color: azure;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin: 0 0 1rem;
+}
+
+h1 {
+  font-size: rem(60px);
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  outline: none;
+}
+p {
+  margin: 0 0 1rem;
+  max-width: 60ch;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

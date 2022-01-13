@@ -1,0 +1,16 @@
+.main-layout {
+  @include for-mobile-layout {
+    max-width: 575.98px;
+  }
+
+  @include for-narrow-layout {
+    max-width: 767.98px;
+  }
+
+  @include for-normal-layout {
+    max-width: 991.98px;
+  }
+
+  @include for-wide-layout {
+  }
+}
