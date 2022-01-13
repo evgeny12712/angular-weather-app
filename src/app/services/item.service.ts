@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of } from 'rxjs';
-import { delay, map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { Weather } from '../models/weather.model';
-import { storageService } from './storageService';
 @Injectable({
   providedIn: 'root',
 })

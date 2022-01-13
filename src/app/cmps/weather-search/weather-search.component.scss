@@ -2,9 +2,9 @@
   margin-block: 50px;
   border-radius: 40%;
   & .search-wrapper {
-    background-color: rgb(161, 233, 255);
     padding: 10px 20px;
     border-radius: 20px;
+    border: 1px solid rgba(102, 102, 102, 0.096);
     & input {
       color: black;
       background-color: transparent;

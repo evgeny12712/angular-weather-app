@@ -20,10 +20,10 @@ export class HomePageComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
-    storageService.load('weather', this.weather);
-    this.weather = storageService.load('weather', this.weather);
+    // storageService.load('weather', this.weather);
+    // this.weather = storageService.load('weather', this.weather);
 
-    // this.weather = await this.itemService.queryWeather('');
-    // storageService.store('weather', this.weather);
+    this.weather = await this.itemService.queryWeather('');
+    storageService.store('weather', this.weather);
   }
 }
