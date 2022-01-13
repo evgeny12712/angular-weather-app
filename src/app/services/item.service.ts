@@ -14,7 +14,7 @@ export class ItemService {
       try {
         return this.http
           .get<{ answer: string }>(
-            `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=AikVyA6GWrhDgfdkt54NFwda2ilo5TUI`
+            `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=AikVyA6GWrhDgfdkt54NFwda2ilo5TUI`
           )
           .toPromise();
       } catch (error) {
@@ -28,7 +28,7 @@ export class ItemService {
     try {
       return this.http
         .get(
-          `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=AikVyA6GWrhDgfdkt54NFwda2ilo5TUI&q=${location}`
+          `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=AikVyA6GWrhDgfdkt54NFwda2ilo5TUI&q=${location}`
         )
         .toPromise();
     } catch (error) {
