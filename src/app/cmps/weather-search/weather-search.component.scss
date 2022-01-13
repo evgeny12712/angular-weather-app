@@ -11,6 +11,9 @@
       border-radius: 8px;
       outline: none;
       border: none;
+      &:focus {
+        background-color: transparent;
+      }
     }
     & button {
       cursor: pointer;
