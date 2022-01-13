@@ -25,7 +25,6 @@ export class ItemService {
   }
 
   private _getLocationId(location: string) {
-    console.log(`Loading 'location' data from api...`);
     try {
       return this.http
         .get(

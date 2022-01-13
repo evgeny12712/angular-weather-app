@@ -14,7 +14,6 @@ export class ItemsPreviewComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.day) {
-      console.log(this.day);
       this.imageSrc = `./assets/${this.day.Day.Icon}.png`;
     }
   }
