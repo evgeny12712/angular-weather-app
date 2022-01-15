@@ -10,7 +10,10 @@ html {
 
 body {
   margin: 0;
-  background-color: azure;
+  height: 100vh;
+  background-image: linear-gradient(45deg, rgb(88, 125, 167), rgb(92, 70, 0));
+  background-repeat: no-repeat;
+  background-image: 100vh;
 }
 
 h1,

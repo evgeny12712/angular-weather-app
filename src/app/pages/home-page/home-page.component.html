@@ -1,5 +1,5 @@
 <section class="main-layout home-page flex column auto-center">
   <weather-search (weatherEvent)="onNewLocation($event)"></weather-search>
-  <h3 *ngIf="weather">{{ weather.Headline.Text }}</h3>
+  <h3 class="weather-headline" *ngIf="weather">{{ weather.Headline.Text }}</h3>
   <items-list *ngIf="weather" [weather]="weather"></items-list>
 </section>
